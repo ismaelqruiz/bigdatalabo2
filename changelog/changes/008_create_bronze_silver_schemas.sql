@@ -1,4 +1,3 @@
-```sql
 --liquibase formatted sql
 
 --changeset estudiante:008
@@ -10,4 +9,3 @@ COMMENT 'Silver - cleaned and standardized data layer';
 
 --rollback DROP SCHEMA IF EXISTS workspace.silver;
 --rollback DROP SCHEMA IF EXISTS workspace.bronze;
-```
