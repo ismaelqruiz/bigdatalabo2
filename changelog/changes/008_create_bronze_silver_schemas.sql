@@ -1,6 +1,5 @@
 
 --liquibase formatted sql
-
 --changeset estudiante:008
 CREATE SCHEMA IF NOT EXISTS workspace.bronze
 COMMENT 'Bronze - raw data layer';
