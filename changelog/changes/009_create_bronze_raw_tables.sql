@@ -1,4 +1,4 @@
-```sql
+
 --liquibase formatted sql
 
 --changeset estudiante:009
@@ -20,4 +20,3 @@ USING DELTA;
 
 --rollback DROP TABLE IF EXISTS workspace.bronze.products_raw;
 --rollback DROP TABLE IF EXISTS workspace.bronze.sales_raw;
-```
