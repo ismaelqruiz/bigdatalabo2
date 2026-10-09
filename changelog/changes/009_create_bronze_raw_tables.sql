@@ -1,5 +1,6 @@
 
 --liquibase formatted sql
+
 --changeset estudiante:009
 CREATE TABLE IF NOT EXISTS workspace.bronze.sales_raw (
     sale_id STRING,
