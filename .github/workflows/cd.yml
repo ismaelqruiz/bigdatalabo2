@@ -34,7 +34,7 @@ jobs:
         run: |
           liquibase \
             --changelog-file=changelog/db.changelog-master.yaml \
-            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;transportMode=http;ssl=1;httpPath=${DATABRICKS_HTTP_PATH};AuthMech=3;UID=token;PWD=${DATABRICKS_TOKEN};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
+            --url="jdbc:databricks://${DATABRICKS_HOST}:443;transportMode=http;ssl=1;httpPath=${DATABRICKS_HTTP_PATH};AuthMech=3;UID=token;PWD=${DATABRICKS_TOKEN};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
             validate
 
       - name: Deploy pending changesets
@@ -46,7 +46,7 @@ jobs:
         run: |
           liquibase \
             --changelog-file=changelog/db.changelog-master.yaml \
-            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;transportMode=http;ssl=1;httpPath=${DATABRICKS_HTTP_PATH};AuthMech=3;UID=token;PWD=${DATABRICKS_TOKEN};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
+            --url="jdbc:databricks://${DATABRICKS_HOST}:443;transportMode=http;ssl=1;httpPath=${DATABRICKS_HTTP_PATH};AuthMech=3;UID=token;PWD=${DATABRICKS_TOKEN};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
             update
 
       - name: Confirm database status
@@ -58,5 +58,5 @@ jobs:
         run: |
           liquibase \
             --changelog-file=changelog/db.changelog-master.yaml \
-            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;transportMode=http;ssl=1;httpPath=${DATABRICKS_HTTP_PATH};AuthMech=3;UID=token;PWD=${DATABRICKS_TOKEN};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
+            --url="jdbc:databricks://${DATABRICKS_HOST}:443;transportMode=http;ssl=1;httpPath=${DATABRICKS_HTTP_PATH};AuthMech=3;UID=token;PWD=${DATABRICKS_TOKEN};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
             status --verbose
